@@ -19,5 +19,5 @@ models - they are the informative representation of an object. etc: schedule.
 1. Automation Testing With xUnit
    There are two automation test that had been added to the backend project using xUnit
 2. Input Prevention
-   For input number, symbols and characters like -,+,e,E can be keyed in the input. 
+   For input number, symbols and characters like -,+,e,E can't be keyed in the input. 
    So i added a checker to check the keyed in character to prevent symbols and characters that had been listed 
