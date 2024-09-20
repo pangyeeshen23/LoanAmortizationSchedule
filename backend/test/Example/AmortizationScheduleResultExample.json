@@ -1,0 +1,486 @@
+﻿{
+  "monthlyPaymentAmount": 221.34,
+  "totalInterestPaid": 624.5,
+  "amortizationSchedules": [
+    {
+      "month": 1,
+      "payment": 221.34,
+      "interestPortion": 25,
+      "principalPortion": 196.34,
+      "interestPercentage": 11.29,
+      "principalPercentage": 88.71,
+      "remainingAmount": 9803.66,
+      "date": "2024-10-16T02:54:57.93Z"
+    },
+    {
+      "month": 2,
+      "payment": 221.34,
+      "interestPortion": 24.51,
+      "principalPortion": 196.83,
+      "interestPercentage": 11.07,
+      "principalPercentage": 88.93,
+      "remainingAmount": 9606.83,
+      "date": "2024-11-16T02:54:57.93Z"
+    },
+    {
+      "month": 3,
+      "payment": 221.34,
+      "interestPortion": 24.02,
+      "principalPortion": 197.33,
+      "interestPercentage": 10.85,
+      "principalPercentage": 89.15,
+      "remainingAmount": 9409.5,
+      "date": "2024-12-16T02:54:57.93Z"
+    },
+    {
+      "month": 4,
+      "payment": 221.34,
+      "interestPortion": 23.52,
+      "principalPortion": 197.82,
+      "interestPercentage": 10.63,
+      "principalPercentage": 89.37,
+      "remainingAmount": 9211.68,
+      "date": "2025-01-16T02:54:57.93Z"
+    },
+    {
+      "month": 5,
+      "payment": 221.34,
+      "interestPortion": 23.03,
+      "principalPortion": 198.31,
+      "interestPercentage": 10.4,
+      "principalPercentage": 89.6,
+      "remainingAmount": 9013.37,
+      "date": "2025-02-16T02:54:57.93Z"
+    },
+    {
+      "month": 6,
+      "payment": 221.34,
+      "interestPortion": 22.53,
+      "principalPortion": 198.81,
+      "interestPercentage": 10.18,
+      "principalPercentage": 89.82,
+      "remainingAmount": 8814.56,
+      "date": "2025-03-16T02:54:57.93Z"
+    },
+    {
+      "month": 7,
+      "payment": 221.34,
+      "interestPortion": 22.04,
+      "principalPortion": 199.31,
+      "interestPercentage": 9.96,
+      "principalPercentage": 90.04,
+      "remainingAmount": 8615.25,
+      "date": "2025-04-16T02:54:57.93Z"
+    },
+    {
+      "month": 8,
+      "payment": 221.34,
+      "interestPortion": 21.54,
+      "principalPortion": 199.81,
+      "interestPercentage": 9.73,
+      "principalPercentage": 90.27,
+      "remainingAmount": 8415.44,
+      "date": "2025-05-16T02:54:57.93Z"
+    },
+    {
+      "month": 9,
+      "payment": 221.34,
+      "interestPortion": 21.04,
+      "principalPortion": 200.3,
+      "interestPercentage": 9.5,
+      "principalPercentage": 90.5,
+      "remainingAmount": 8215.14,
+      "date": "2025-06-16T02:54:57.93Z"
+    },
+    {
+      "month": 10,
+      "payment": 221.34,
+      "interestPortion": 20.54,
+      "principalPortion": 200.81,
+      "interestPercentage": 9.28,
+      "principalPercentage": 90.72,
+      "remainingAmount": 8014.33,
+      "date": "2025-07-16T02:54:57.93Z"
+    },
+    {
+      "month": 11,
+      "payment": 221.34,
+      "interestPortion": 20.04,
+      "principalPortion": 201.31,
+      "interestPercentage": 9.05,
+      "principalPercentage": 90.95,
+      "remainingAmount": 7813.02,
+      "date": "2025-08-16T02:54:57.93Z"
+    },
+    {
+      "month": 12,
+      "payment": 221.34,
+      "interestPortion": 19.53,
+      "principalPortion": 201.81,
+      "interestPercentage": 8.82,
+      "principalPercentage": 91.18,
+      "remainingAmount": 7611.21,
+      "date": "2025-09-16T02:54:57.93Z"
+    },
+    {
+      "month": 13,
+      "payment": 221.34,
+      "interestPortion": 19.03,
+      "principalPortion": 202.32,
+      "interestPercentage": 8.6,
+      "principalPercentage": 91.4,
+      "remainingAmount": 7408.89,
+      "date": "2025-10-16T02:54:57.93Z"
+    },
+    {
+      "month": 14,
+      "payment": 221.34,
+      "interestPortion": 18.52,
+      "principalPortion": 202.82,
+      "interestPercentage": 8.37,
+      "principalPercentage": 91.63,
+      "remainingAmount": 7206.07,
+      "date": "2025-11-16T02:54:57.93Z"
+    },
+    {
+      "month": 15,
+      "payment": 221.34,
+      "interestPortion": 18.02,
+      "principalPortion": 203.33,
+      "interestPercentage": 8.14,
+      "principalPercentage": 91.86,
+      "remainingAmount": 7002.74,
+      "date": "2025-12-16T02:54:57.93Z"
+    },
+    {
+      "month": 16,
+      "payment": 221.34,
+      "interestPortion": 17.51,
+      "principalPortion": 203.84,
+      "interestPercentage": 7.91,
+      "principalPercentage": 92.09,
+      "remainingAmount": 6798.9,
+      "date": "2026-01-16T02:54:57.93Z"
+    },
+    {
+      "month": 17,
+      "payment": 221.34,
+      "interestPortion": 17,
+      "principalPortion": 204.35,
+      "interestPercentage": 7.68,
+      "principalPercentage": 92.32,
+      "remainingAmount": 6594.55,
+      "date": "2026-02-16T02:54:57.93Z"
+    },
+    {
+      "month": 18,
+      "payment": 221.34,
+      "interestPortion": 16.49,
+      "principalPortion": 204.86,
+      "interestPercentage": 7.45,
+      "principalPercentage": 92.55,
+      "remainingAmount": 6389.69,
+      "date": "2026-03-16T02:54:57.93Z"
+    },
+    {
+      "month": 19,
+      "payment": 221.34,
+      "interestPortion": 15.97,
+      "principalPortion": 205.37,
+      "interestPercentage": 7.22,
+      "principalPercentage": 92.78,
+      "remainingAmount": 6184.32,
+      "date": "2026-04-16T02:54:57.93Z"
+    },
+    {
+      "month": 20,
+      "payment": 221.34,
+      "interestPortion": 15.46,
+      "principalPortion": 205.88,
+      "interestPercentage": 6.98,
+      "principalPercentage": 93.02,
+      "remainingAmount": 5978.44,
+      "date": "2026-05-16T02:54:57.93Z"
+    },
+    {
+      "month": 21,
+      "payment": 221.34,
+      "interestPortion": 14.95,
+      "principalPortion": 206.4,
+      "interestPercentage": 6.75,
+      "principalPercentage": 93.25,
+      "remainingAmount": 5772.04,
+      "date": "2026-06-16T02:54:57.93Z"
+    },
+    {
+      "month": 22,
+      "payment": 221.34,
+      "interestPortion": 14.43,
+      "principalPortion": 206.91,
+      "interestPercentage": 6.52,
+      "principalPercentage": 93.48,
+      "remainingAmount": 5565.13,
+      "date": "2026-07-16T02:54:57.93Z"
+    },
+    {
+      "month": 23,
+      "payment": 221.34,
+      "interestPortion": 13.91,
+      "principalPortion": 207.43,
+      "interestPercentage": 6.29,
+      "principalPercentage": 93.71,
+      "remainingAmount": 5357.7,
+      "date": "2026-08-16T02:54:57.93Z"
+    },
+    {
+      "month": 24,
+      "payment": 221.34,
+      "interestPortion": 13.39,
+      "principalPortion": 207.95,
+      "interestPercentage": 6.05,
+      "principalPercentage": 93.95,
+      "remainingAmount": 5149.75,
+      "date": "2026-09-16T02:54:57.93Z"
+    },
+    {
+      "month": 25,
+      "payment": 221.34,
+      "interestPortion": 12.87,
+      "principalPortion": 208.47,
+      "interestPercentage": 5.82,
+      "principalPercentage": 94.18,
+      "remainingAmount": 4941.28,
+      "date": "2026-10-16T02:54:57.93Z"
+    },
+    {
+      "month": 26,
+      "payment": 221.34,
+      "interestPortion": 12.35,
+      "principalPortion": 208.99,
+      "interestPercentage": 5.58,
+      "principalPercentage": 94.42,
+      "remainingAmount": 4732.29,
+      "date": "2026-11-16T02:54:57.93Z"
+    },
+    {
+      "month": 27,
+      "payment": 221.34,
+      "interestPortion": 11.83,
+      "principalPortion": 209.51,
+      "interestPercentage": 5.34,
+      "principalPercentage": 94.66,
+      "remainingAmount": 4522.78,
+      "date": "2026-12-16T02:54:57.93Z"
+    },
+    {
+      "month": 28,
+      "payment": 221.34,
+      "interestPortion": 11.31,
+      "principalPortion": 210.04,
+      "interestPercentage": 5.11,
+      "principalPercentage": 94.89,
+      "remainingAmount": 4312.74,
+      "date": "2027-01-16T02:54:57.93Z"
+    },
+    {
+      "month": 29,
+      "payment": 221.34,
+      "interestPortion": 10.78,
+      "principalPortion": 210.56,
+      "interestPercentage": 4.87,
+      "principalPercentage": 95.13,
+      "remainingAmount": 4102.18,
+      "date": "2027-02-16T02:54:57.93Z"
+    },
+    {
+      "month": 30,
+      "payment": 221.34,
+      "interestPortion": 10.26,
+      "principalPortion": 211.09,
+      "interestPercentage": 4.63,
+      "principalPercentage": 95.37,
+      "remainingAmount": 3891.09,
+      "date": "2027-03-16T02:54:57.93Z"
+    },
+    {
+      "month": 31,
+      "payment": 221.34,
+      "interestPortion": 9.73,
+      "principalPortion": 211.62,
+      "interestPercentage": 4.39,
+      "principalPercentage": 95.61,
+      "remainingAmount": 3679.47,
+      "date": "2027-04-16T02:54:57.93Z"
+    },
+    {
+      "month": 32,
+      "payment": 221.34,
+      "interestPortion": 9.2,
+      "principalPortion": 212.14,
+      "interestPercentage": 4.16,
+      "principalPercentage": 95.84,
+      "remainingAmount": 3467.33,
+      "date": "2027-05-16T02:54:57.93Z"
+    },
+    {
+      "month": 33,
+      "payment": 221.34,
+      "interestPortion": 8.67,
+      "principalPortion": 212.67,
+      "interestPercentage": 3.92,
+      "principalPercentage": 96.08,
+      "remainingAmount": 3254.66,
+      "date": "2027-06-16T02:54:57.93Z"
+    },
+    {
+      "month": 34,
+      "payment": 221.34,
+      "interestPortion": 8.14,
+      "principalPortion": 213.21,
+      "interestPercentage": 3.68,
+      "principalPercentage": 96.32,
+      "remainingAmount": 3041.45,
+      "date": "2027-07-16T02:54:57.93Z"
+    },
+    {
+      "month": 35,
+      "payment": 221.34,
+      "interestPortion": 7.6,
+      "principalPortion": 213.74,
+      "interestPercentage": 3.44,
+      "principalPercentage": 96.56,
+      "remainingAmount": 2827.71,
+      "date": "2027-08-16T02:54:57.93Z"
+    },
+    {
+      "month": 36,
+      "payment": 221.34,
+      "interestPortion": 7.07,
+      "principalPortion": 214.27,
+      "interestPercentage": 3.19,
+      "principalPercentage": 96.81,
+      "remainingAmount": 2613.44,
+      "date": "2027-09-16T02:54:57.93Z"
+    },
+    {
+      "month": 37,
+      "payment": 221.34,
+      "interestPortion": 6.53,
+      "principalPortion": 214.81,
+      "interestPercentage": 2.95,
+      "principalPercentage": 97.05,
+      "remainingAmount": 2398.63,
+      "date": "2027-10-16T02:54:57.93Z"
+    },
+    {
+      "month": 38,
+      "payment": 221.34,
+      "interestPortion": 6,
+      "principalPortion": 215.35,
+      "interestPercentage": 2.71,
+      "principalPercentage": 97.29,
+      "remainingAmount": 2183.28,
+      "date": "2027-11-16T02:54:57.93Z"
+    },
+    {
+      "month": 39,
+      "payment": 221.34,
+      "interestPortion": 5.46,
+      "principalPortion": 215.89,
+      "interestPercentage": 2.47,
+      "principalPercentage": 97.53,
+      "remainingAmount": 1967.39,
+      "date": "2027-12-16T02:54:57.93Z"
+    },
+    {
+      "month": 40,
+      "payment": 221.34,
+      "interestPortion": 4.92,
+      "principalPortion": 216.42,
+      "interestPercentage": 2.22,
+      "principalPercentage": 97.78,
+      "remainingAmount": 1750.97,
+      "date": "2028-01-16T02:54:57.93Z"
+    },
+    {
+      "month": 41,
+      "payment": 221.34,
+      "interestPortion": 4.38,
+      "principalPortion": 216.97,
+      "interestPercentage": 1.98,
+      "principalPercentage": 98.02,
+      "remainingAmount": 1534,
+      "date": "2028-02-16T02:54:57.93Z"
+    },
+    {
+      "month": 42,
+      "payment": 221.34,
+      "interestPortion": 3.84,
+      "principalPortion": 217.51,
+      "interestPercentage": 1.73,
+      "principalPercentage": 98.27,
+      "remainingAmount": 1316.49,
+      "date": "2028-03-16T02:54:57.93Z"
+    },
+    {
+      "month": 43,
+      "payment": 221.34,
+      "interestPortion": 3.29,
+      "principalPortion": 218.05,
+      "interestPercentage": 1.49,
+      "principalPercentage": 98.51,
+      "remainingAmount": 1098.44,
+      "date": "2028-04-16T02:54:57.93Z"
+    },
+    {
+      "month": 44,
+      "payment": 221.34,
+      "interestPortion": 2.75,
+      "principalPortion": 218.6,
+      "interestPercentage": 1.24,
+      "principalPercentage": 98.76,
+      "remainingAmount": 879.84,
+      "date": "2028-05-16T02:54:57.93Z"
+    },
+    {
+      "month": 45,
+      "payment": 221.34,
+      "interestPortion": 2.2,
+      "principalPortion": 219.14,
+      "interestPercentage": 0.99,
+      "principalPercentage": 99.01,
+      "remainingAmount": 660.7,
+      "date": "2028-06-16T02:54:57.93Z"
+    },
+    {
+      "month": 46,
+      "payment": 221.34,
+      "interestPortion": 1.65,
+      "principalPortion": 219.69,
+      "interestPercentage": 0.75,
+      "principalPercentage": 99.25,
+      "remainingAmount": 441.01,
+      "date": "2028-07-16T02:54:57.93Z"
+    },
+    {
+      "month": 47,
+      "payment": 221.34,
+      "interestPortion": 1.1,
+      "principalPortion": 220.24,
+      "interestPercentage": 0.5,
+      "principalPercentage": 99.5,
+      "remainingAmount": 220.77,
+      "date": "2028-08-16T02:54:57.93Z"
+    },
+    {
+      "month": 48,
+      "payment": 221.32,
+      "interestPortion": 0.55,
+      "principalPortion": 220.77,
+      "interestPercentage": 0.25,
+      "principalPercentage": 99.75,
+      "remainingAmount": 0,
+      "date": "2028-09-16T02:54:57.93Z"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LoanApi", "LoanApi.csproj", "{E965A3A2-9D9F-4AE5-8630-8AFFDDB41A51}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Test", "Test", "{00BB2C79-8186-418A-A771-75C48B3A2D27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "..\test\Test.csproj", "{2295039C-FE75-40EC-A8A9-F037CE5273BB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E965A3A2-9D9F-4AE5-8630-8AFFDDB41A51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E965A3A2-9D9F-4AE5-8630-8AFFDDB41A51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E965A3A2-9D9F-4AE5-8630-8AFFDDB41A51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E965A3A2-9D9F-4AE5-8630-8AFFDDB41A51}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2295039C-FE75-40EC-A8A9-F037CE5273BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2295039C-FE75-40EC-A8A9-F037CE5273BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2295039C-FE75-40EC-A8A9-F037CE5273BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2295039C-FE75-40EC-A8A9-F037CE5273BB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2295039C-FE75-40EC-A8A9-F037CE5273BB} = {00BB2C79-8186-418A-A771-75C48B3A2D27}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CC529E0-5969-4501-9A8A-DD9ACB9ADDDA}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="form">
+        <h2 class="form-title">Loan Amortization Scheduler</h2>
+        <form [formGroup]="form">
+            <input-field label="Loan Amount"  inputType="number" [control]="loanAmountControl"></input-field>
+            <input-field label="Annual Interest Rate (%)" inputType="number" [control]="annualInterestRateControl"></input-field>
+            <input-field label="Loan Term (Years)" inputType="year" [control]="loanTermControl"></input-field>
+            <input-field label="Start Date of the Loan" inputType="date" [control]="initialDateOfLoanControl"></input-field>
+            <button (click)="generateSchedule()" [disabled]="disableButton" class="btnGenerate">Generate Schedule</button>
+        </form>
+    </div>
+    @if (summary != null) {
+        <div class="schd">
+            <h2 class="schd-title">Schedule</h2>
+            <p class="schd-subtitle">Monthly Payment Amount: {{summary.monthlyPaymentAmount  | number:'1.2-2'}}</p>
+            <p class="schd-subtitle">Total Interest Paid Over The Loan Term: {{summary.totalInterestPaid | number:'1.2-2'}}</p>
+            <p class="schd-subtitle">Start Date Of Loan: {{initialDateOfLoanControl.value}}</p>
+            <table class="schd-tbl">
+                <thead class="schd-tbl-header">
+                    <tr>
+                        <th>Month</th>
+                        <th>Date</th>
+                        <th>Payment</th>
+                        <th>Interest Portion</th>
+                        <th>Principal Portion</th>
+                        <th>Interest Percentage</th>
+                        <th>Principal Percentage</th>
+                        <th>Remaining</th>
+                    </tr>
+                </thead>
+                <tbody class="schd-tbl-body">
+                    @for(schedule of summary.payments; track schedule.month){
+                        <tr class="schd-tbl-row">
+                            <td>{{schedule.month}}</td>
+                            <td>{{this.datePipe.transform(schedule.date, 'dd/MM/yyyy')}}</td>
+                            <td>${{schedule.amount  | number:'1.2-2'}}</td>
+                            <td>${{schedule.interestPortion | number:'1.2-2' }}</td>
+                            <td>${{schedule.principalPortion  | number:'1.2-2'}}</td>
+                            <td>{{schedule.interestPercentage  | number:'1.2-2'}}%</td>
+                            <td>{{schedule.principalPercentage  | number:'1.2-2'}}%</td>
+                            <td>${{schedule.remainingAmount  | number:'1.2-2'}}</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

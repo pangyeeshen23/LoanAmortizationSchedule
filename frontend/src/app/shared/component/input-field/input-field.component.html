@@ -1,0 +1,10 @@
+<div class="form-component">
+    <label class="label">{{label}}</label>
+    <input type="{{getInputType()}}" [formControl]="control" (keydown)="checkCharacter($event)">
+    <div *ngIf="control.invalid && control.touched" class="error-messages">
+        <span *ngIf="control.hasError('required')">{{label}} is required</span>
+        <span *ngIf="control.hasError('min')">{{label}} must be greater than {{control.getError("min").min}}</span>
+        <span *ngIf="control.hasError('max')">{{label}} must be lesser than {{control.getError("max").max}}</span>
+        <span *ngIf="control.hasError('validateMaxDecimalPlaces')">{{label}}'s decimal places must be less than {{control.getError("validateMaxDecimalPlaces").maxDecimalPlace}}</span>
+    </div>
+</div>
