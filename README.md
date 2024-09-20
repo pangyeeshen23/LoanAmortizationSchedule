@@ -21,14 +21,3 @@ models - they are the informative representation of an object. etc: schedule.
 2. Input Prevention
    For input number, symbols and characters like -,+,e,E can be keyed in the input. 
    So i added a checker to check the keyed in character to prevent symbols and characters that had been listed 
-   
-### **Problems**
-Some scenarios does not product a 0 remaining amount on the last month's payment like
-
-Input :
-Loan Amount : 74451819
-Annual Interest Rate : 47
-Loan Term : 40
-Initial Date of Loan : 10/09/2024
-
-Remaining Amount : 603671.86
