@@ -1,4 +1,5 @@
-﻿using LoanApi.Dtos.Inputs;
+﻿using DecimalMath;
+using LoanApi.Dtos.Inputs;
 using LoanApi.Dtos.Outputs;
 using LoanApi.Models;
 
@@ -22,10 +23,11 @@ namespace LoanApi.Handler
 
         private static AmortizationScheduleSummaryResp CalculateProcess(AmortizationScheduleSummaryResp resp, AmortizationScheduleSummaryInput input)
         {
-            double loanAmount = input.LoanAmount;
+            decimal loanAmount = input.LoanAmount;
             int numOfPayment = input.LoanTerm * 12;
-            double monthlyInterestRate = (input.AnnualInterestRate / 100) / 12;
-            double monthlyPayment = CalcMontlyPayment(loanAmount, monthlyInterestRate, numOfPayment);
+            decimal monthlyInterestRate = (input.AnnualInterestRate / 100) / 12;
+            decimal monthlyPayment = CalcMontlyPayment(loanAmount, monthlyInterestRate, numOfPayment);
+            decimal totalInterestPaid = 0;
             resp.MonthlyPaymentAmount = Math.Round(monthlyPayment, 2, MidpointRounding.ToEven);
             resp.Payments = new List<Payment>();
             for (int i = 1; i <= numOfPayment; i++)
@@ -34,69 +36,69 @@ namespace LoanApi.Handler
                 Payment payment = new Payment();
                 payment.Month = i;
                 payment.Amount = Math.Round(monthlyPayment, 2, MidpointRounding.ToEven);
-                double interestPortionPayment = CalcInterestPortion(monthlyInterestRate, loanAmount);
+                decimal interestPortionPayment = CalcInterestPortion(monthlyInterestRate, loanAmount);
                 payment.InterestPortion = Math.Round(interestPortionPayment, 2, MidpointRounding.ToEven);
                 payment.InterestPercentage = Math.Round(CalcInterestPortionPercentage(monthlyPayment, interestPortionPayment), 2, MidpointRounding.ToEven);
-                double principalPortion = CalcPrincipalPortion(monthlyPayment, interestPortionPayment);
+                decimal principalPortion = CalcPrincipalPortion(monthlyPayment, interestPortionPayment);
                 payment.PrincipalPortion = Math.Round(principalPortion, 2, MidpointRounding.ToEven);
                 payment.PrincipalPercentage = Math.Round(CalcPrincipalPortionPercentage(monthlyPayment, principalPortion), 2, MidpointRounding.ToEven);
                 payment.Date = (input.InitialDateOfLoan != null) ? input.InitialDateOfLoan.Value.AddMonths(i) : new DateTime().AddMonths(i);
                 loanAmount = CalcLoanAmount(loanAmount, principalPortion);
                 payment.RemainingAmount = Math.Round(loanAmount, 2, MidpointRounding.ToEven);
-                resp.TotalInterestPaid = Math.Round(CalcTotalInterestPaid(resp.TotalInterestPaid, interestPortionPayment), 2, MidpointRounding.ToEven);
+                totalInterestPaid = CalcTotalInterestPaid(totalInterestPaid, interestPortionPayment);
                 resp.Payments.Add(payment);
             }
-
+            resp.TotalInterestPaid = Math.Round(totalInterestPaid, 2, MidpointRounding.ToEven);
             return resp;
         }
         
-        private static double CalcMontlyPayment(double loanAmount, double monthlyInterestRate, int numOfPayment)
+        private static decimal CalcMontlyPayment(decimal loanAmount, decimal monthlyInterestRate, int numOfPayment)
         {
-            double interest = (1 + monthlyInterestRate);
-            double poweredMonthlyInterestRate = Math.Pow(interest, numOfPayment);
-            double monthlyPayment = (loanAmount * monthlyInterestRate * poweredMonthlyInterestRate) / (poweredMonthlyInterestRate - 1);
+            decimal interest = (1 + monthlyInterestRate);
+            decimal poweredMonthlyInterestRate = DecimalEx.Pow(interest, numOfPayment);
+            decimal monthlyPayment = (loanAmount * monthlyInterestRate * poweredMonthlyInterestRate) / (poweredMonthlyInterestRate - 1);
             return monthlyPayment;
         }
 
-        private static double CalcInterestPortion(double monthlyInterestRate, double loanAmount)
+        private static decimal CalcInterestPortion(decimal monthlyInterestRate, decimal loanAmount)
         {
-            double interestPortion = loanAmount * monthlyInterestRate;
+            decimal interestPortion = loanAmount * monthlyInterestRate;
             return interestPortion;
         }
 
-        private static double CalcInterestPortionPercentage(double monthlyPayment, double interestPortionPayment)
+        private static decimal CalcInterestPortionPercentage(decimal monthlyPayment, decimal interestPortionPayment)
         {
-            double percentage = (interestPortionPayment / monthlyPayment) * 100;
+            decimal percentage = (interestPortionPayment / monthlyPayment) * 100;
             return percentage;
         }
 
-        private static double CalcPrincipalPortion(double monthlyPayment, double interestPortionPayment)
+        private static decimal CalcPrincipalPortion(decimal monthlyPayment, decimal interestPortionPayment)
         {
-            double result = monthlyPayment - interestPortionPayment;
+            decimal result = monthlyPayment - interestPortionPayment;
             return result; 
         }
 
-        private static double CalcPrincipalPortionPercentage(double monthlyPayment, double principalPayment)
+        private static decimal CalcPrincipalPortionPercentage(decimal monthlyPayment, decimal principalPayment)
         {
-            double percentage = (principalPayment / monthlyPayment) * 100;
+            decimal percentage = (principalPayment / monthlyPayment) * 100;
             return percentage;
         }
 
-        private static double CalcLoanAmount(double loanAmount, double principalPortion)
+        private static decimal CalcLoanAmount(decimal loanAmount, decimal principalPortion)
         {
-            double result = loanAmount - principalPortion;
+            decimal result = loanAmount - principalPortion;
             return result;
         }
 
-        private static double CalcTotalInterestPaid(double totalInterestPaid, double interestPortion) 
+        private static decimal CalcTotalInterestPaid(decimal totalInterestPaid, decimal interestPortion) 
         {
-            double result = totalInterestPaid + interestPortion;
+            decimal result = totalInterestPaid + interestPortion;
             return result;
         }
 
-        private static double CalcLastMonthPayment(double loanAmount, double monthlyInterestRate)
+        private static decimal CalcLastMonthPayment(decimal loanAmount, decimal monthlyInterestRate)
         {
-            double result = loanAmount + (loanAmount * monthlyInterestRate);
+            decimal result = loanAmount + (loanAmount * monthlyInterestRate);
             return result;
         }
     }

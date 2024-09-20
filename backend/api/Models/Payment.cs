@@ -3,12 +3,12 @@
     public class Payment
     {
         public int Month { get; set; }
-        public double Amount { get; set; }
-        public double InterestPortion { get; set; }
-        public double PrincipalPortion { get; set; }
-        public double InterestPercentage { get; set; }
-        public double PrincipalPercentage { get; set; }
-        public double RemainingAmount { get; set; }
+        public decimal Amount { get; set; }
+        public decimal InterestPortion { get; set; }
+        public decimal PrincipalPortion { get; set; }
+        public decimal InterestPercentage { get; set; }
+        public decimal PrincipalPercentage { get; set; }
+        public decimal RemainingAmount { get; set; }
         public DateTime Date { get; set; }
     }
 }
