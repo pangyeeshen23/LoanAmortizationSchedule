@@ -32,7 +32,7 @@ namespace LoanApiTest
             AmortizationScheduleSummaryResp response = _controller.GetAmortizationScheduleSummary(input).Value;
             int totalPeriod = input.LoanTerm * 12;
             IList<Payment> schdules = response.Payments;
-            double remainingAmount = schdules.Last().RemainingAmount;
+            decimal remainingAmount = schdules.Last().RemainingAmount;
             Assert.NotNull(response);
             Assert.Equal(totalPeriod, response.Payments.Count);
             Assert.Equal(0, remainingAmount);
@@ -59,20 +59,20 @@ namespace LoanApiTest
 
         private bool ValidateResponse(AmortizationScheduleSummaryResp response, AmortizationScheduleSummaryResp exampleResponse)
         {
-            EqualityComparer<double> doubleComparer = EqualityComparer<double>.Default;
-            if (!doubleComparer.Equals(response.MonthlyPaymentAmount, exampleResponse.MonthlyPaymentAmount)) return false;
-            if (!doubleComparer.Equals(response.TotalInterestPaid, exampleResponse.TotalInterestPaid)) return false;
+            EqualityComparer<decimal> decimalComparer = EqualityComparer<decimal>.Default;
+            if (!decimalComparer.Equals(response.MonthlyPaymentAmount, exampleResponse.MonthlyPaymentAmount)) return false;
+            if (!decimalComparer.Equals(response.TotalInterestPaid, exampleResponse.TotalInterestPaid)) return false;
             foreach (Payment schedule in exampleResponse.Payments)
             {
                 Payment exampleSchedule = exampleResponse.Payments.FirstOrDefault(eschedule => eschedule.Month == schedule.Month);
                 if (exampleSchedule == null) return false;
                 if (schedule.Month != exampleSchedule.Month) return false;
-                if (!doubleComparer.Equals(schedule.Amount, exampleSchedule.Amount)) return false;
-                if (!doubleComparer.Equals(schedule.InterestPortion, exampleSchedule.InterestPortion)) return false;
-                if (!doubleComparer.Equals(schedule.PrincipalPortion, exampleSchedule.PrincipalPortion)) return false;
-                if (!doubleComparer.Equals(schedule.InterestPercentage, exampleSchedule.InterestPercentage)) return false;
-                if (!doubleComparer.Equals(schedule.PrincipalPercentage, exampleSchedule.PrincipalPercentage)) return false;
-                if (!doubleComparer.Equals(schedule.RemainingAmount, exampleSchedule.RemainingAmount)) return false;
+                if (!decimalComparer.Equals(schedule.Amount, exampleSchedule.Amount)) return false;
+                if (!decimalComparer.Equals(schedule.InterestPortion, exampleSchedule.InterestPortion)) return false;
+                if (!decimalComparer.Equals(schedule.PrincipalPortion, exampleSchedule.PrincipalPortion)) return false;
+                if (!decimalComparer.Equals(schedule.InterestPercentage, exampleSchedule.InterestPercentage)) return false;
+                if (!decimalComparer.Equals(schedule.PrincipalPercentage, exampleSchedule.PrincipalPercentage)) return false;
+                if (!decimalComparer.Equals(schedule.RemainingAmount, exampleSchedule.RemainingAmount)) return false;
                 if (!schedule.Date.Equals(exampleSchedule.Date)) return false;
             }
             return true;
